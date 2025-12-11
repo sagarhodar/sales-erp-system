@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: sales-erp-system
+    env: docker
+    plan: free
+    healthCheckPath: /_stcore/health
+    envVars:
+      - key: STREAMLIT_SERVER_PORT
+        value: 8501
+      - key: STREAMLIT_SERVER_ADDRESS
+        value: 0.0.0.0
+      - key: STREAMLIT_SERVER_HEADLESS
+        value: true
